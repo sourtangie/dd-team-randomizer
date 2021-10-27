@@ -1,4 +1,5 @@
 import "./App.css";
+import "react-slideshow-image/dist/styles.css";
 import React, { useState } from "react";
 import { HeroContainer } from "./HeroContainer";
 import runaway from "./heroes/runaway.png";
@@ -10,10 +11,21 @@ import leper from "./heroes/Leper.webp";
 import manatarms from "./heroes/Man-At-Arms.webp";
 import occultist from "./heroes/Occultist.webp";
 import unknown from "./heroes/unknown.png";
-
 import plagueDoctor from "./heroes/Plague_Doctor.webp";
+import { Slide } from "react-slideshow-image";
 
 function App() {
+  const slideImages = [
+    {
+      url: graveRobber,
+    },
+    {
+      url: hellion,
+    },
+    {
+      url: highwayman,
+    },
+  ];
   const heroes = [
     { name: "Grave Robber", id: 0, img: graveRobber },
     { name: "Hellion", id: 1, img: hellion },
@@ -45,7 +57,6 @@ function App() {
       }
       chosenIDs.push(newID);
     }
-
     setSelectedHeroes([
       heroes[chosenIDs[0]],
       heroes[chosenIDs[1]],
@@ -68,26 +79,34 @@ function App() {
         <div className="team-container">
           <div className="hero-container">
             <div className="moon">
-              <img className="hero-img"></img>
-              <p className="hero-name"></p>
+              <div className="img">
+                <img className="hero-img" src={unknown} />
+              </div>
+              <p className="hero-name">???</p>
             </div>
           </div>
           <div className="hero-container">
             <div className="moon">
-              <img className="hero-img"></img>
-              <p className="hero-name"></p>
+              <div className="img">
+                <img className="hero-img" src={unknown} />
+              </div>
+              <p className="hero-name">???</p>
             </div>
           </div>
           <div className="hero-container">
             <div className="moon">
-              <img className="hero-img"></img>
-              <p className="hero-name"></p>
+              <div className="img">
+                <img className="hero-img" src={unknown} />
+              </div>
+              <p className="hero-name">???</p>
             </div>
           </div>
           <div className="hero-container">
             <div className="moon">
-              <img className="hero-img"></img>
-              <p className="hero-name"></p>
+              <div className="img">
+                <img className="hero-img" src={unknown} />
+              </div>
+              <p className="hero-name">???</p>
             </div>
           </div>
         </div>
@@ -105,30 +124,14 @@ function App() {
         </header>
         <div className="page-container">
           <div className="team-container">
-            <div className="hero-container">
-              <div className="moon">
-                <img className="hero-img" src={selectedHeroes[0].img}></img>
-                <p className="hero-name">{selectedHeroes[0].name}</p>
+            {selectedHeroes.map((hero) => (
+              <div className="hero-container">
+                <div className="moon">
+                  <img className="hero-img" src={hero.img}></img>
+                  <p className="hero-name">{hero.name}</p>
+                </div>
               </div>
-            </div>
-            <div className="hero-container">
-              <div className="moon">
-                <img className="hero-img" src={selectedHeroes[1].img}></img>
-                <p className="hero-name">{selectedHeroes[1].name}</p>
-              </div>
-            </div>
-            <div className="hero-container">
-              <div className="moon">
-                <img className="hero-img" src={selectedHeroes[2].img}></img>
-                <p className="hero-name">{selectedHeroes[2].name}</p>
-              </div>
-            </div>
-            <div className="hero-container">
-              <div className="moon">
-                <img className="hero-img" src={selectedHeroes[3].img}></img>
-                <p className="hero-name">{selectedHeroes[3].name}</p>
-              </div>
-            </div>
+            ))}
           </div>
           <button className="generate-btn" onClick={() => generateTeam()}>
             Pick new team
@@ -145,26 +148,34 @@ function App() {
       <div className="team-container">
         <div className="hero-container">
           <div className="moon">
-            <img className="hero-img" src={unknown}></img>
-            <p className="hero-name"></p>
+            <div className="img">
+              <img className="hero-img" src={unknown}></img>
+            </div>
+            <p className="hero-name">???</p>
           </div>
         </div>
         <div className="hero-container">
           <div className="moon">
-            <img className="hero-img" src={unknown}></img>
-            <p className="hero-name"></p>
+            <div className="img">
+              <img className="hero-img" src={unknown}></img>
+            </div>
+            <p className="hero-name">???</p>
           </div>
         </div>
         <div className="hero-container">
           <div className="moon">
-            <img className="hero-img" src={unknown}></img>
-            <p className="hero-name"></p>
+            <div className="img">
+              <img className="hero-img" src={unknown}></img>
+            </div>
+            <p className="hero-name">???</p>
           </div>
         </div>
         <div className="hero-container">
           <div className="moon">
-            <img className="hero-img" src={unknown}></img>
-            <p className="hero-name"></p>
+            <div className="img">
+              <img className="hero-img" src={unknown}></img>
+            </div>
+            <p className="hero-name">???</p>
           </div>
         </div>
       </div>
