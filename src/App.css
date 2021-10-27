@@ -96,17 +96,15 @@ img {
   height: 140px;
   overflow: hidden;
 }
-.shuffling {
-  animation: shimmy 3s infinite;
-  animation-direction: alternate;
-  transition-delay: 0ms;
+.true {
+  animation: spin 1.5s infinite;
 }
-@keyframes shimmy {
+@keyframes spin {
   0% {
-    transform: translate(0, 0);
+    transform: rotate(0deg);
   }
 
   100% {
-    transform: translate(0px, -1250px);
+    transform: rotate(3600deg);
   }
 }

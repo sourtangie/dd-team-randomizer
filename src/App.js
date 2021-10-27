@@ -57,14 +57,16 @@ function App() {
       }
       chosenIDs.push(newID);
     }
-    setSelectedHeroes([
-      heroes[chosenIDs[0]],
-      heroes[chosenIDs[1]],
-      heroes[chosenIDs[2]],
-      heroes[chosenIDs[3]],
-    ]);
+    setTimeout(() => {
+      setSelectedHeroes([
+        heroes[chosenIDs[0]],
+        heroes[chosenIDs[1]],
+        heroes[chosenIDs[2]],
+        heroes[chosenIDs[3]],
+      ]);
 
-    setLoading(false);
+      setLoading(false);
+    }, 1500);
   };
 
   const chooseHero = () => {
@@ -80,7 +82,7 @@ function App() {
           <div className="hero-container">
             <div className="moon">
               <div className="img">
-                <img className="hero-img" src={unknown} />
+                <img className={"hero-img " + loading} src={unknown} />
               </div>
               <p className="hero-name">???</p>
             </div>
@@ -88,7 +90,7 @@ function App() {
           <div className="hero-container">
             <div className="moon">
               <div className="img">
-                <img className="hero-img" src={unknown} />
+                <img className={"hero-img " + loading} src={unknown} />
               </div>
               <p className="hero-name">???</p>
             </div>
@@ -96,7 +98,7 @@ function App() {
           <div className="hero-container">
             <div className="moon">
               <div className="img">
-                <img className="hero-img" src={unknown} />
+                <img className={"hero-img " + loading} src={unknown} />
               </div>
               <p className="hero-name">???</p>
             </div>
@@ -104,7 +106,7 @@ function App() {
           <div className="hero-container">
             <div className="moon">
               <div className="img">
-                <img className="hero-img" src={unknown} />
+                <img className={"hero-img " + loading} src={unknown} />
               </div>
               <p className="hero-name">???</p>
             </div>
