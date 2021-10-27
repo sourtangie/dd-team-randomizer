@@ -9,6 +9,7 @@ import jester from "./heroes/Jester.webp";
 import leper from "./heroes/Leper.webp";
 import manatarms from "./heroes/Man-At-Arms.webp";
 import occultist from "./heroes/Occultist.webp";
+import unknown from "./heroes/unknown.png";
 
 import plagueDoctor from "./heroes/Plague_Doctor.webp";
 
@@ -30,8 +31,10 @@ function App() {
   const [secondHero, setSecondHero] = useState();
   const [thirdHero, setThirdHero] = useState();
   const [fourthHero, setFourthHero] = useState();
+  const [loading, setLoading] = useState(false);
 
   const generateTeam = () => {
+    setLoading(true);
     let heroesAvailable = heroes;
     let chosenIDs = [];
     let newID;
@@ -42,18 +45,58 @@ function App() {
       }
       chosenIDs.push(newID);
     }
+
     setSelectedHeroes([
       heroes[chosenIDs[0]],
       heroes[chosenIDs[1]],
       heroes[chosenIDs[2]],
       heroes[chosenIDs[3]],
     ]);
+
+    setLoading(false);
   };
 
   const chooseHero = () => {
     return Math.floor(Math.random() * 9);
   };
-
+  if (loading === true) {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <p>Darkest Dungeon Hero Selector</p>
+        </header>
+        <div className="team-container">
+          <div className="hero-container">
+            <div className="moon">
+              <img className="hero-img"></img>
+              <p className="hero-name"></p>
+            </div>
+          </div>
+          <div className="hero-container">
+            <div className="moon">
+              <img className="hero-img"></img>
+              <p className="hero-name"></p>
+            </div>
+          </div>
+          <div className="hero-container">
+            <div className="moon">
+              <img className="hero-img"></img>
+              <p className="hero-name"></p>
+            </div>
+          </div>
+          <div className="hero-container">
+            <div className="moon">
+              <img className="hero-img"></img>
+              <p className="hero-name"></p>
+            </div>
+          </div>
+        </div>
+        <button className="generate-btn" onClick={() => generateTeam()}>
+          Pick new team
+        </button>
+      </div>
+    );
+  }
   if (selectedHeroes.length > 3) {
     return (
       <div className="App">
@@ -100,14 +143,34 @@ function App() {
         <p>Darkest Dungeon Hero Selector</p>
       </header>
       <div className="team-container">
-        <div className="hero-container"></div>
-        <div className="hero-container"></div>
-        <div className="hero-container"></div>
-        <div className="hero-container"></div>
-        <button className="generate-btn" onClick={() => generateTeam()}>
-          Pick new team
-        </button>
+        <div className="hero-container">
+          <div className="moon">
+            <img className="hero-img" src={unknown}></img>
+            <p className="hero-name"></p>
+          </div>
+        </div>
+        <div className="hero-container">
+          <div className="moon">
+            <img className="hero-img" src={unknown}></img>
+            <p className="hero-name"></p>
+          </div>
+        </div>
+        <div className="hero-container">
+          <div className="moon">
+            <img className="hero-img" src={unknown}></img>
+            <p className="hero-name"></p>
+          </div>
+        </div>
+        <div className="hero-container">
+          <div className="moon">
+            <img className="hero-img" src={unknown}></img>
+            <p className="hero-name"></p>
+          </div>
+        </div>
       </div>
+      <button className="generate-btn" onClick={() => generateTeam()}>
+        Pick new team
+      </button>
     </div>
   );
 }
