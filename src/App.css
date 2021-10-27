@@ -1,3 +1,9 @@
+@media only screen and (max-width: 600px) {
+  .hero-name {
+    font-size: 11px !important;
+  }
+}
+
 .moon {
   background-color: #660505;
   border-radius: 50% 50% 1% 1%;
@@ -8,7 +14,7 @@
 .hero-name {
   margin-left: 5px;
   font-weight: bold;
-  font-size: 120%;
+  font-size: 22px;
 }
 .team-container {
   display: flex;
