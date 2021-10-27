@@ -92,90 +92,79 @@ function App() {
 
   if (selectedHeroes.length > 3) {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>Darkest Dungeon II Hero Selector</p>
-        </header>
-        <div className="page-container">
-          <div className="team-container">
-            {selectedHeroes.map((hero, index) => (
-              <div className="hero-container">
-                <div className="moon">
-                  {(index == 0 && loading1 && (
-                    <div>
-                      <img className={"hero-img " + loading1} src={unknown} />
-                      <p className="hero-name">???</p>
-                    </div>
-                  )) ||
-                    (index == 1 && loading2 && (
-                      <div>
-                        <img className={"hero-img " + loading2} src={unknown} />
-                        <p className="hero-name">???</p>
-                      </div>
-                    )) ||
-                    (index == 2 && loading3 && (
-                      <div>
-                        <img className={"hero-img " + loading3} src={unknown} />
-                        <p className="hero-name">???</p>
-                      </div>
-                    )) ||
-                    (index == 3 && loading4 && (
-                      <div>
-                        <img className={"hero-img " + loading4} src={unknown} />
-                        <p className="hero-name">???</p>
-                      </div>
-                    )) || (
-                      <div>
-                        <img className="hero-img" src={hero.img}></img>{" "}
-                        <p className="hero-name">{hero.name}</p>
-                      </div>
-                    )}
-                </div>
-              </div>
-            ))}
-          </div>
-          <button className="generate-btn" onClick={() => generateTeam()}>
-            Pick new team
-          </button>
+      <div className="App page-container">
+        <div className="App-header">
+          <h3>Darkest Dungeon II Hero Selector</h3>
         </div>
+
+        <div className="team-container">
+          {selectedHeroes.map((hero, index) => (
+            <div className="hero-container">
+              {(index == 0 && loading1 && (
+                <div className="flexColumn">
+                  <img className={"hero-img " + loading1} src={unknown} />
+                  <p className="hero-name">???</p>
+                </div>
+              )) ||
+                (index == 1 && loading2 && (
+                  <div className="flexColumn">
+                    <img className={"hero-img " + loading2} src={unknown} />
+                    <p className="hero-name">???</p>
+                  </div>
+                )) ||
+                (index == 2 && loading3 && (
+                  <div className="flexColumn">
+                    <img className={"hero-img " + loading3} src={unknown} />
+                    <p className="hero-name">???</p>
+                  </div>
+                )) ||
+                (index == 3 && loading4 && (
+                  <div className="flexColumn">
+                    <img className={"hero-img " + loading4} src={unknown} />
+                    <p className="hero-name">???</p>
+                  </div>
+                )) || (
+                  <div className="flexColumn">
+                    <img className="hero-img" src={hero.img}></img>{" "}
+                    <p className="hero-name">{hero.name}</p>
+                  </div>
+                )}
+            </div>
+          ))}
+        </div>
+        <button className="generate-btn" onClick={() => generateTeam()}>
+          Pick new team
+        </button>
       </div>
     );
   }
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Darkest Dungeon II Hero Selector</p>
-      </header>
+    <div className="App page-container">
+      <div className="App-header">
+        <h3>Darkest Dungeon II Hero Selector</h3>
+      </div>
       <div className="team-container">
         <div className="hero-container">
-          <div className="moon">
-            <div className="img">
-              <img className="hero-img" src={unknown}></img>
-            </div>
+          <div className="flexColumn">
+            <img className={"hero-img"} src={unknown} />
             <p className="hero-name">???</p>
           </div>
         </div>
         <div className="hero-container">
-          <div className="moon">
-            <div className="img">
-              <img className="hero-img" src={unknown}></img>
-            </div>
+          <div className="flexColumn">
+            <img className={"hero-img"} src={unknown} />
             <p className="hero-name">???</p>
           </div>
         </div>
         <div className="hero-container">
-          <div className="moon">
-            <div className="img">
-              <img className="hero-img" src={unknown}></img>
-            </div>
+          <div className="flexColumn">
+            <img className={"hero-img"} src={unknown} />
             <p className="hero-name">???</p>
           </div>
         </div>
         <div className="hero-container">
-          <div className="moon">
-            <div className="img">
-              <img className="hero-img" src={unknown}></img>
-            </div>
+          <div className="flexColumn">
+            <img className={"hero-img"} src={unknown} />
             <p className="hero-name">???</p>
           </div>
         </div>
