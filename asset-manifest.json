@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/dd-team-randomizer/static/css/main.85670070.chunk.css",
-    "main.js": "/dd-team-randomizer/static/js/main.c79765f3.chunk.js",
-    "main.js.map": "/dd-team-randomizer/static/js/main.c79765f3.chunk.js.map",
+    "main.css": "/dd-team-randomizer/static/css/main.9f366541.chunk.css",
+    "main.js": "/dd-team-randomizer/static/js/main.bf45be01.chunk.js",
+    "main.js.map": "/dd-team-randomizer/static/js/main.bf45be01.chunk.js.map",
     "runtime-main.js": "/dd-team-randomizer/static/js/runtime-main.28b66e51.js",
     "runtime-main.js.map": "/dd-team-randomizer/static/js/runtime-main.28b66e51.js.map",
     "static/js/2.ddf5c484.chunk.js": "/dd-team-randomizer/static/js/2.ddf5c484.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.bf59bf08.chunk.js": "/dd-team-randomizer/static/js/3.bf59bf08.chunk.js",
     "static/js/3.bf59bf08.chunk.js.map": "/dd-team-randomizer/static/js/3.bf59bf08.chunk.js.map",
     "index.html": "/dd-team-randomizer/index.html",
-    "static/css/main.85670070.chunk.css.map": "/dd-team-randomizer/static/css/main.85670070.chunk.css.map",
+    "static/css/main.9f366541.chunk.css.map": "/dd-team-randomizer/static/css/main.9f366541.chunk.css.map",
     "static/js/2.ddf5c484.chunk.js.LICENSE.txt": "/dd-team-randomizer/static/js/2.ddf5c484.chunk.js.LICENSE.txt",
     "static/media/Grave_Robber.8fd3aae3.webp": "/dd-team-randomizer/static/media/Grave_Robber.8fd3aae3.webp",
     "static/media/Hellion.3fd983eb.webp": "/dd-team-randomizer/static/media/Hellion.3fd983eb.webp",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.28b66e51.js",
     "static/js/2.ddf5c484.chunk.js",
-    "static/css/main.85670070.chunk.css",
-    "static/js/main.c79765f3.chunk.js"
+    "static/css/main.9f366541.chunk.css",
+    "static/js/main.bf45be01.chunk.js"
   ]
 }
