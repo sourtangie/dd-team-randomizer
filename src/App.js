@@ -63,7 +63,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <p>Darkest Dungeon Hero Selector</p>
+          <p>Darkest Dungeon II Hero Selector</p>
         </header>
         <div className="team-container">
           <div className="hero-container">
@@ -101,7 +101,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <p>Darkest Dungeon 2 Hero Selector</p>
+          <p>Darkest Dungeon II Hero Selector</p>
         </header>
         <div className="page-container">
           <div className="team-container">
@@ -140,7 +140,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Darkest Dungeon Hero Selector</p>
+        <p>Darkest Dungeon II Hero Selector</p>
       </header>
       <div className="team-container">
         <div className="hero-container">
