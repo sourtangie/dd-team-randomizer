@@ -3,6 +3,11 @@
     font-size: 11px !important;
   }
 }
+@media only screen and (min-width: 600px) {
+  .hero-img {
+    min-height: 140px !important;
+  }
+}
 
 .moon {
   background-color: #660505;
@@ -86,4 +91,22 @@ img {
   text-align: center;
   align-self: center;
   font-size: 16px;
+}
+.shuffler {
+  height: 140px;
+  overflow: hidden;
+}
+.shuffling {
+  animation: shimmy 3s infinite;
+  animation-direction: alternate;
+  transition-delay: 0ms;
+}
+@keyframes shimmy {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0px, -1250px);
+  }
 }
