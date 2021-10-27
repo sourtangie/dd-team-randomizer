@@ -10,7 +10,6 @@
 }
 
 .moon {
-  background-color: #660505;
   border-radius: 50% 50% 1% 1%;
   height: 20%;
   width: 100%;
@@ -20,6 +19,7 @@
   margin-left: 5px;
   font-weight: bold;
   font-size: 22px;
+  background-color: transparent;
 }
 .team-container {
   display: flex;
@@ -55,8 +55,8 @@ img {
   justify-content: center;
   justify-items: center;
   flex-direction: column;
-  background-image: url(./heroes/torch.png);
-  background-size: contain;
+  background-image: url(./heroes/bg.png);
+  background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   min-height: 340px;
@@ -97,7 +97,7 @@ img {
   overflow: hidden;
 }
 .true {
-  animation: spin 1.5s infinite;
+  animation: spin 2.5s infinite;
 }
 @keyframes spin {
   0% {

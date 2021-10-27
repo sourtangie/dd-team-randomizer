@@ -43,10 +43,17 @@ function App() {
   const [secondHero, setSecondHero] = useState();
   const [thirdHero, setThirdHero] = useState();
   const [fourthHero, setFourthHero] = useState();
-  const [loading, setLoading] = useState(false);
+  const [loading1, setLoading1] = useState(false);
+  const [loading2, setLoading2] = useState(false);
+  const [loading3, setLoading3] = useState(false);
+  const [loading4, setLoading4] = useState(false);
 
   const generateTeam = () => {
-    setLoading(true);
+    setLoading1(true);
+    setLoading2(true);
+    setLoading3(true);
+    setLoading4(true);
+
     let heroesAvailable = heroes;
     let chosenIDs = [];
     let newID;
@@ -64,60 +71,25 @@ function App() {
         heroes[chosenIDs[2]],
         heroes[chosenIDs[3]],
       ]);
-
-      setLoading(false);
-    }, 1500);
+      setTimeout(() => {
+        setLoading1(false);
+        setTimeout(() => {
+          setLoading2(false);
+          setTimeout(() => {
+            setLoading3(false);
+            setTimeout(() => {
+              setLoading4(false);
+            }, 500);
+          }, 500);
+        }, 500);
+      }, 500);
+    }, 500);
   };
 
   const chooseHero = () => {
     return Math.floor(Math.random() * 9);
   };
-  if (loading === true) {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <p>Darkest Dungeon II Hero Selector</p>
-        </header>
-        <div className="team-container">
-          <div className="hero-container">
-            <div className="moon">
-              <div className="img">
-                <img className={"hero-img " + loading} src={unknown} />
-              </div>
-              <p className="hero-name">???</p>
-            </div>
-          </div>
-          <div className="hero-container">
-            <div className="moon">
-              <div className="img">
-                <img className={"hero-img " + loading} src={unknown} />
-              </div>
-              <p className="hero-name">???</p>
-            </div>
-          </div>
-          <div className="hero-container">
-            <div className="moon">
-              <div className="img">
-                <img className={"hero-img " + loading} src={unknown} />
-              </div>
-              <p className="hero-name">???</p>
-            </div>
-          </div>
-          <div className="hero-container">
-            <div className="moon">
-              <div className="img">
-                <img className={"hero-img " + loading} src={unknown} />
-              </div>
-              <p className="hero-name">???</p>
-            </div>
-          </div>
-        </div>
-        <button className="generate-btn" onClick={() => generateTeam()}>
-          Pick new team
-        </button>
-      </div>
-    );
-  }
+
   if (selectedHeroes.length > 3) {
     return (
       <div className="App">
@@ -126,11 +98,38 @@ function App() {
         </header>
         <div className="page-container">
           <div className="team-container">
-            {selectedHeroes.map((hero) => (
+            {selectedHeroes.map((hero, index) => (
               <div className="hero-container">
                 <div className="moon">
-                  <img className="hero-img" src={hero.img}></img>
-                  <p className="hero-name">{hero.name}</p>
+                  {(index == 0 && loading1 && (
+                    <div>
+                      <img className={"hero-img " + loading1} src={unknown} />
+                      <p className="hero-name">???</p>
+                    </div>
+                  )) ||
+                    (index == 1 && loading2 && (
+                      <div>
+                        <img className={"hero-img " + loading2} src={unknown} />
+                        <p className="hero-name">???</p>
+                      </div>
+                    )) ||
+                    (index == 2 && loading3 && (
+                      <div>
+                        <img className={"hero-img " + loading3} src={unknown} />
+                        <p className="hero-name">???</p>
+                      </div>
+                    )) ||
+                    (index == 3 && loading4 && (
+                      <div>
+                        <img className={"hero-img " + loading4} src={unknown} />
+                        <p className="hero-name">???</p>
+                      </div>
+                    )) || (
+                      <div>
+                        <img className="hero-img" src={hero.img}></img>{" "}
+                        <p className="hero-name">{hero.name}</p>
+                      </div>
+                    )}
                 </div>
               </div>
             ))}
